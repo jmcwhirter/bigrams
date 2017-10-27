@@ -7,8 +7,6 @@ import java.util.stream.Collectors;
 public class Main {
 
     private static final String SPLIT_CHAR = " ";
-    private static final String SANITIZE_REGEX = "[^A-Za-z0-9 ]";
-    private static final String SANITIZE_REPLACE = "";
 
     public static void main(String[] args) {
         Main program = new Main();
@@ -57,7 +55,7 @@ public class Main {
     }
 
     public String sanitize(String text) {
-        return text.toLowerCase().replaceAll(SANITIZE_REGEX, SANITIZE_REPLACE);
+        return text.toLowerCase().trim().replaceAll("[^A-Za-z0-9']", " ").replaceAll(" +", " ");
     }
 
     public void sortAndPrint(Map<String, Integer> bigrams) {
