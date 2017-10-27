@@ -17,3 +17,8 @@ Output:
 "quick blue" 1
 "blue hare" 1
 ```
+More difficult files:
+```
+java -jar out/artifacts/Bigram_jar/Bigram.jar 3lpigs.txt
+java -jar out/artifacts/Bigram_jar/Bigram.jar uglyduck.txt
+```
